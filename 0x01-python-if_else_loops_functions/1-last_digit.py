@@ -2,6 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 lastdit = abs(number) % 10
+if (lastdit < 0):
+    lastdit = -lastdit
 if (lastdit > 5):
     print(f"Last digit of {number} is {lastdit} and is greater than 5")
 elif (lastdit == 0):
