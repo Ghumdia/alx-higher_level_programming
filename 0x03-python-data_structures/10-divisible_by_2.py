@@ -5,4 +5,4 @@ def divisible_by_2(my_list=[]):
           mul.append(True)
          else:
           mul.append(False)
-            
+    return (mul)
