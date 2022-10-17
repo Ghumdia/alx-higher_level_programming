@@ -6,10 +6,15 @@
 
 class Rectangle:
 
+    """Represent a rectangle. 
+
+    Attributes:
+        number_of_instances (int): The number of rectamgle instances
+        print_symbol (any): The symbol used for string representation.
+        """
     number_of_instances = 0
     print_symbol = "#"
 
-    """Define Rectangle"""
     def __init__(self, width=0, height=0):
         """initialize a new rectangle"""
         type(self).number_of_instances += 1
