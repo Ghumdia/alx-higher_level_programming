@@ -5,50 +5,53 @@
 
 
 class Rectangle:
+    """Represent a rectangle.
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
+    """
+
     number_of_instances = 0
-    """Define Rectangle"""
+
     def __init__(self, width=0, height=0):
-        """initialize a new rectangle"""
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Returns the width of rectangle"""
-        return (self.__width)
-
-    @property
-    def height(self):
-        return (self.__height)
+        """Get/set the width of the Rectangle."""
+        return self.__width
 
     @width.setter
     def width(self, value):
-        """sets a new width value"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    @property
+    def height(self):
+        """Get/set the height of the Rectangle."""
+        return self.__height
+
     @height.setter
     def height(self, value):
-        """sets a new height value"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            P = 0
-            return P
-        P = 2 * (self.__width + self.__height)
-        return P
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
