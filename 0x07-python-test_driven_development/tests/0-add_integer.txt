@@ -1,3 +1,9 @@
+Usage
+=====
+
+``add_integer(...)``` returns the addition of its two arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
 ::
 
     >>> add_integer = __import__('0-add_integer').add_integer
@@ -41,6 +47,13 @@ The second argument is optional - by default, it is 98.
 
     >>> add_integer(2)
     100
+
+Non-Numbers
+===========
+
+``add_integer()`` expects that both arguments are either integers or floats.
+If either argument is a non-integer and non-float, a TypeError is raised:
+
 ::
 
     >>> add_integer("hello", 3)
