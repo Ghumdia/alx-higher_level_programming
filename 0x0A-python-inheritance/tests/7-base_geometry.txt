@@ -20,7 +20,7 @@ Instantiation
 
     >>> bg = BaseGeometry(None)
     Traceback (most recent call last):
-    TypeError: object() takes no parameters
+    TypeError: BaseGeometry() takes no arguments
 
 
 ::
@@ -61,8 +61,6 @@ Instantiation
 ::
 
     >>> bg.integer_validator("another invalid", True)
-    Traceback (most recent call last):
-    TypeError: another invalid must be an integer
 
 ::
 
