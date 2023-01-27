@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Lists all the states beginning with N
+    Lists all the states beginning with N int the 
+    database hbtn_0e_0_usa
 """
 
 import sys
