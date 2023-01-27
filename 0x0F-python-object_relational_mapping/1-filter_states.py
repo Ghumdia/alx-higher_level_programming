@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-#Filters out the states beginning with the alphabet N(uppercase)
+
+"""
+Lists all the states beginning with N
+"""
 
 import sys
 import MySQLdb
