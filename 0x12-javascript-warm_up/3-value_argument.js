@@ -8,7 +8,6 @@ while (ag[i]) {
 if (i >= 3) {
   const tx = ag[2];
   console.log(tx);
-}
-else {
+} else {
   console.log('No argument');
 }
