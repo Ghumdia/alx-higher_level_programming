@@ -5,7 +5,7 @@ let i = 0;
 while (ag[i]) {
   i++;
 }
-if (i > 3) {
+if (i >= 3) {
   const tx = ag[2];
   console.log(tx);
 }
