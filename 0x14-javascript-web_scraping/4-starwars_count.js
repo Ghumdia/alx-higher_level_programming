@@ -1,17 +1,14 @@
 #!/usr/bin/node
-// Searchs for the number of times a character appears in a movie
+// Checks fr the number of times a character appears in movies
 
 const request = require('request');
-const ag = process.argv;
-
-request(ag[2], (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
+    }, 0));
   }
-
-  const films = JSON.parse(body).results;
-  const numFilmsWithWedge = films.filter(film => film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')).length;
-
-  console.log(numFilmsWithWedge);
 });
